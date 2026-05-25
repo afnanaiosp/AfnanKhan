@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afnan Khan | Cloud DevSecOps & AI Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: #0b0c10; color: #c5c6c7; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .navbar { background-color: #1f2833; border-bottom: 2px solid #66fcf1; }
+        .navbar-brand, .nav-link { color: #66fcf1 !important; font-weight: bold; }
+        .nav-link:hover { color: #45f3ff !important; }
+        
+        /* Hero Section Styling using Melan Dark Accents */
+        .hero-section { padding: 100px 0; background: linear-gradient(rgba(11,12,16,0.8), rgba(31,40,51,0.9)), url('img/hero-bg.jpg') no-repeat center center/cover; min-height: 85vh; display: flex; align-items: center; }
+        .hero-title { font-size: 3.5rem; font-weight: 800; color: #ffffff; }
+        .hero-title span { color: #66fcf1; }
+        .tagline { font-size: 1.5rem; color: #45f3ff; margin-bottom: 30px; font-weight: 300; }
+        .btn-custom { background-color: #66fcf1; color: #0b0c10; font-weight: bold; border-radius: 30px; padding: 12px 30px; transition: 0.3s; margin-right: 15px; border: none; }
+        .btn-custom:hover { background-color: #45f3ff; transform: translateY(-3px); }
+        .btn-outline-custom { border: 2px solid #66fcf1; color: #66fcf1; font-weight: bold; border-radius: 30px; padding: 12px 30px; transition: 0.3s; }
+        .btn-outline-custom:hover { background-color: #66fcf1; color: #0b0c10; }
+        
+        /* Layout Component Sections */
+        .section-padding { padding: 80px 0; border-bottom: 1px solid #1f2833; }
+        .section-title { color: #ffffff; font-weight: 700; margin-bottom: 40px; position: relative; }
+        .section-title::after { content: ''; display: block; width: 60px; height: 3px; background-color: #66fcf1; margin-top: 10px; }
+        
+        /* Responsive Video Box */
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border: 3px solid #1f2833; border-radius: 12px; box-shadow: 0 4px 20px rgba(102,252,241,0.1); }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        
+        /* Grid Element Layouts */
+        .project-card { background-color: #1f2833; border: 1px solid #1f2833; border-radius: 10px; padding: 25px; height: 100%; transition: 0.3s; }
+        .project-card:hover { border-color: #66fcf1; transform: translateY(-5px); }
+        .project-card h4 { color: #ffffff; margin-bottom: 15px; }
+        .tech-badge { background-color: rgba(102,252,241,0.1); color: #66fcf1; padding: 4px 10px; border-radius: 5px; font-size: 0.85rem; margin-right: 5px; display: inline-block; margin-bottom: 5px; }
+        
+        .skill-badge { background: #1f2833; color: #ffffff; border-left: 3px solid #66fcf1; padding: 10px 20px; font-weight: 600; border-radius: 4px; margin-bottom: 15px; }
+        .timeline-item { border-left: 2px solid #66fcf1; padding-left: 20px; position: relative; margin-bottom: 30px; }
+        .timeline-item::before { content: ''; position: absolute; width: 12px; height: 12px; background: #66fcf1; left: -7px; top: 6px; border-radius: 50%; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home"><i class="fa-solid ba fa-circle-nodes me-2"></i>AFNAN KHAN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-collapse justify-content-end navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#interview">Interview</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience & Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="hero-title">Hi, I am <span>Afnan Khan</span></h1>
+                    <p class="tagline">Cloud DevSecOps Engineer specializing in Workflow Automation & Agentic AI Integration</p>
+                    <p class="mb-4">3x AWS Certified | 1x Google Certified Cybersecurity Researcher & Active Bug Hunter. Expert in securing and scaling cloud-native microservices architectures, AI infrastructure, and autonomous agent systems.</p>
+                    <div class="mt-4">
+                        <a href="https://github.com/AfnanKhan55/AWS-DEVOPS-PROJECTS.git" target="_blank" class="btn-custom"><i class="fab fa-github me-2"></i>View GitHub Projects</a>
+                        <a href="http://www.linkedin.com/in/afnan-khan-a062b322b" target="_blank" class="btn-outline-custom"><i class="fab fa-linkedin me-2"></i>Connect on LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="interview" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Technical Interview & Project Defense</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <p class="mb-4 text-center">Watch my complete technical presentation and professional evaluation conducted by Al Nafi covering cloud architecture deployment, security automation, and my EduQual UK qualification.</p>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Al Nafi Technical Interview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Flagship Cloud & AI Projects</h2>
+            <div class="row g-4 mb-5">
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <span class="tech-badge">AWS EBS</span> <span class="tech-badge">ECS / ECR</span> <span class="tech-badge">Docker</span> <span class="tech-badge">AWS CodePipeline</span>
+                        <h4>Automated Persistent Storage & CI/CD for Containers</h4>
+                        <p>Architected custom persistent data integrity storage layers for Dockerized runtimes. Configured fully automated enterprise deployment pipelines where repository commits trigger automated builds, push images to ECR, and execute rolling updates on ECS.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <span class="tech-badge">AWS VPC</span> <span class="tech-badge">IAM Roles</span> <span class="tech-badge">Network ACLs</span> <span class="tech-badge">EC2 Security Groups</span>
+                        <h4>Automated Isolated Multi-Tier Application Deployment</h4>
+                        <p>Deployed a production-grade 3-tier web application stack applying cloud security best practices. Engineered custom isolation boundaries utilizing private subnets, security group cascading, and network access control matrices to enforce tight zero-trust security perimeters.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <span class="tech-badge">Kubernetes</span> <span class="tech-badge">Docker</span> <span class="tech-badge">Bash Scripting</span> <span class="tech-badge">Vagrant / Linux</span>
+                        <h4>Local Automated Production-Ready Orchestration Cluster</h4>
+                        <p>Created a zero-cloud-cost container cluster orchestration testing environment. Coded automated bash provisioning frameworks to launch and configure multi-node systems with high availability, automated self-healing replication blocks, and advanced load routing controllers.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <span class="tech-badge">Agentic AI</span> <span class="tech-badge">LLMOps</span> <span class="tech-badge">GCP for AI</span> <span class="tech-badge">DevSecOps Guardrails</span>
+                        <h4>Secure CI/CD Guardrail Automation for Autonomous Agents</h4>
+                        <p>Designed sandboxed operational environments for testing Agentic AI instances. Implemented continuous integration monitoring streams and pipeline gates checking for execution loop anomalies, permission escalations, and credential leakage risks within autonomous models.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="text-white mb-4"><i class="fa-solid fa-folder-tree text-info me-2"></i>Extended Infrastructure Repository Index (50+ Deployments)</h3>
+            <div class="row">
+                <div class="col-lg-6">
+                    <ul class="list-group list-group-flush bg-transparent">
+                        <li class="list-group-item bg-transparent text-secondary border-secondary"><span class="text-info font-monospace me-2">[Ref 01-15]</span> Serverless Automation Runbooks (AWS Lambda, Python Scripts, EventBridge)</li>
+                        <li class="list-group-item bg-transparent text-secondary border-secondary"><span class="text-info font-monospace me-2">[Ref 16-28]</span> Declarative Multi-Cloud Infrastructure (Terraform Configurations, CloudFormation)</li>
+                        <li class="list-group-item bg-transparent text-secondary border-secondary"><span class="text-info font-monospace me-2">[Ref 29-38]</span> Distributed Metrics & Log Aggregation (Prometheus Scrapers, Grafana dashboards)</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="list-group list-group-flush bg-transparent">
+                        <li class="list-group-item bg-transparent text-secondary border-secondary"><span class="text-info font-monospace me-2">[Ref 39-44]</span> Continuous Security Analysis (SAST/DAST Tool Testing Engines, Secret Scanners)</li>
+                        <li class="list-group-item bg-transparent text-secondary border-secondary"><span class="text-info font-monospace me-2">[Ref 45-52]</span> Configuration State Control Engines (Ansible Playbooks, OS Hardening Scripts)</li>
+                        <li class="list-group-item bg-transparent text-secondary border-secondary"><span class="text-info font-monospace me-2">[Vulnerability Proofs]</span> <strong>Zoho Bug Bounty</strong> Acknowledgement & <strong>Dropbox Disclosures</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Core Technology Domains</h2>
+            <div class="row">
+                <div class="col-md-4 col-6"><div class="skill-badge"><i class="fab fa-aws me-2 text-warning"></i>AWS (In-Depth)</div></div>
+                <div class="col-md-4 col-6"><div class="skill-badge"><i class="fab fa-linux me-2 text-white"></i>Linux Administration</div></div>
+                <div class="col-md-4 col-6"><div class="skill-badge"><i class="fab fa-python me-2 text-info"></i>Python Automation</div></div>
+                <div class="col-md-4 col-6"><div class="skill-badge"><i class="fab fa-docker me-2 text-primary"></i>Docker Containers</div></div>
+                <div class="col-md-4 col-6"><div class="skill-badge"><i class="fa-solid fa-cubes me-2 text-info"></i>Kubernetes Clusters</div></div>
+                <div class="col-md-4 col-6"><div class="skill-badge"><i class="fa-solid fa-infinity me-2 text-danger"></i>Azure DevOps</div></div>
+                <div class="col-md-4 col-6"><div class="skill-badge"><i class="fa-solid fa-robot me-2 text-success"></i>GCP AI & MLOps</div></div>
+                <div class="col-md-4 col-6"><div class="skill-badge"><i class="fa-solid fa-shield-halved me-2 text-warning"></i>Vulnerability Research</div></div>
+                <div class="col-md-4 col-6"><div class="skill-badge"><i class="fa-solid fa-code-branch me-2 text-secondary"></i>Terraform / Ansible</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-5">
+                    <h3 class="text-white mb-4"><i class="fa-solid fa-briefcase text-info me-2"></i>Professional Experience</h3>
+                    <div class="timeline-item">
+                        <h5 class="text-white">DevOps Engineer</h5>
+                        <p class="text-info mb-1">Al Nafi | 12/2023 - 12/2024</p>
+                        <small>Automated hybrid cloud pipelines via AWS CodePipeline & GitHub Actions. Integrated strict compliance validation tools into orchestration routines.</small>
+                    </div>
+                    <div class="timeline-item">
+                        <h5 class="text-white">DevOps Engineering Specialist</h5>
+                        <p class="text-info mb-1">GRNZ Tech</p>
+                        <small>Supervised configuration deployments, monitored cluster state engines, and optimized microservice infrastructure delivery parameters.</small>
+                    </div>
+                    <div class="timeline-item">
+                        <h5 class="text-white">Cloud Infrastructure Associate</h5>
+                        <p class="text-info mb-1">SC Academia</p>
+                        <small>Maintained staging environments, managed network configuration topologies, and supported serverless application transitions.</small>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <h3 class="text-white mb-4"><i class="fa-solid fa-graduation-cap text-info me-2"></i>Education & Certifications</h3>
+                    <div class="timeline-item">
+                        <h5 class="text-white">Bachelor of Science - BS Diploma (AIOps)</h5>
+                        <p class="text-info mb-1">EduQual UK | RQF Level 6 Certified</p>
+                        <small>Specialized curriculum tracking Artificial Intelligence Workflow Optimization, Automation Mechanics, and High-Performance Infrastructure Operations.</small>
+                    </div>
+                    <div class="p-3 mt-4" style="background-color: #1f2833; border-radius: 8px;">
+                        <h6 class="text-white border-bottom border-secondary pb-2">Verified Professional Credentials</h6>
+                        <ul class="list-unstyled mb-0 text-secondary" style="font-size: 0.9rem;">
+                            <li class="mb-2"><i class="fa-solid fa-award text-warning me-2"></i><strong>3x AWS Certified Professional Credentials</strong></li>
+                            <li class="mb-2"><i class="fa-solid fa-award text-info me-2"></i><strong>2x Google Cloud Platform AI Specialized Credentials</strong></li>
+                            <li><i class="fa-solid fa-award text-success me-2"></i><strong>1x Google Professional Cybersecurity Credential</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding text-center" style="background-color: #1f2833;">
+        <div class="container">
+            <h2 class="text-white mb-3">Let's Build Something Secure</h2>
+            <p class="mb-5">Available for professional opportunities, consulting roles, or technical collaborations regarding DevSecOps and AI pipeline automation.</p>
+            <div class="row justify-content-center g-4">
+                <div class="col-md-4">
+                    <div class="p-4" style="background-color: #0b0c10; border-radius: 10px;">
+                        <i class="fa-solid fa-envelope text-info fa-2x mb-3"></i>
+                        <h5>Direct Email</h5>
+                        <a href="mailto:afnan.khan.niazi55@gmail.com" class="text-decoration-none text-info">afnan.khan.niazi55@gmail.com</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4" style="background-color: #0b0c10; border-radius: 10px;">
+                        <i class="fa-brands fa-linkedin text-info fa-2x mb-3"></i>
+                        <h5>LinkedIn Network</h5>
+                        <a href="https://linkedin.com/in/afnan-khan-a062b322b" target="_blank" class="text-decoration-none text-info">Connect with me</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 pt-4 border-top border-secondary text-secondary" style="font-size: 0.85rem;">
+                <p>&copy; 2026 Afnan Khan. Built via Melan Engine Ecosystem. All Rights Reserved.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
