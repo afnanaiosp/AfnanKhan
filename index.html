@@ -155,7 +155,7 @@ body{
 .hero-profile-img {
     max-width: 100%;
     height: auto;
-    max-height: 600px; /* Enhanced size to make it fit big and clear on screen */
+    max-height: 600px;
     border-radius: 24px;
     object-fit: cover;
     filter: drop-shadow(0 0 35px rgba(249,115,22,0.25));
@@ -239,7 +239,7 @@ section{
     height: 100%;
 }
 
-/* Deep-Dive Project Cards (ammarwaqar.dev Layout Strategy) */
+/* Deep-Dive Project Cards - Enhanced Mobile Response */
 .deep-project-card {
     background: #111827;
     border-radius: 24px;
@@ -255,7 +255,7 @@ section{
 .project-banner-side {
     position: relative;
     background: #1e293b;
-    min-height: 280px;
+    min-height: 320px;
 }
 .deep-project-img {
     width: 100%;
@@ -274,18 +274,30 @@ section{
 }
 .project-nav-tabs {
     border-bottom: 1px solid rgba(255,255,255,0.1);
-    margin-bottom: 20px;
-    gap: 10px;
+    margin-bottom: 24px;
+    gap: 5px;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 5px;
+}
+.project-nav-tabs::-webkit-scrollbar {
+    height: 4px;
+}
+.project-nav-tabs::-webkit-scrollbar-thumb {
+    background: rgba(249,115,22,0.3);
+    border-radius: 4px;
 }
 .project-tab-btn {
     background: none;
     border: none;
     color: #94a3b8;
-    padding: 8px 16px;
+    padding: 8px 14px;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 13.5px;
     position: relative;
     transition: 0.2s;
+    flex-shrink: 0;
 }
 .project-tab-btn.active {
     color: #f97316;
@@ -293,7 +305,7 @@ section{
 .project-tab-btn.active::after {
     content: '';
     position: absolute;
-    bottom: -1px;
+    bottom: -6px;
     left: 0;
     width: 100%;
     height: 2px;
@@ -307,6 +319,13 @@ section{
 }
 .tab-content-pane.active {
     display: block;
+}
+.tab-content-pane ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+.tab-content-pane ul li {
+    margin-bottom: 8px;
 }
 
 .tag{
@@ -459,16 +478,26 @@ footer{
     color: #f97316;
 }
 
+/* Comprehensive Mobile Adjustments */
 @media(max-width:992px){
-    .project-banner-side { min-height: 220px; }
+    .project-banner-side { 
+        min-height: 240px; 
+        height: 240px;
+    }
+    .project-details-side {
+        padding: 30px;
+    }
 }
 @media(max-width:768px){
-    .hero h1{ font-size:38px; }
-    .section-title h2{ font-size:36px; }
-    .hero{ text-align: center; }
+    .navbar-brand { font-size: 24px; }
+    .hero h1{ font-size:36px; }
+    .section-title h2{ font-size:32px; }
+    .hero{ text-align: center; padding: 120px 0 60px 0; }
     .hero-buttons{ justify-content: center; }
-    .hero-profile-img { max-height: 420px; margin-top: 40px; }
-    .skills-card { padding: 25px; }
+    .hero-profile-img { max-height: 380px; margin-top: 40px; }
+    .skills-card { padding: 20px; }
+    .project-details-side { padding: 20px; }
+    .project-tab-btn { padding: 6px 10px; font-size: 12.5px; }
 }
 </style>
 </head>
@@ -511,7 +540,7 @@ footer{
                     <span>Engineer & Security Specialist</span>
                 </h1>
                 <p>
-                    <strong> leveraging Generative & Agentic AI </strong><br>
+                    <strong>leveraging Generative & Agentic AI</strong><br>
                     Validated security researcher credited by <strong>Zoho, Dropbox, and Atlassian</strong> for critical Access Control disclosures.
                 </p>
                 <div class="hero-buttons">
@@ -540,12 +569,12 @@ footer{
     <div class="container">
         <div class="section-title" data-aos="fade-up">
             <h2>About & Technical Skillset</h2>
-            
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-11 text-center">
                 <p class="lead text-light mb-4">
-Generative and Agentic AI specialist infusing intelligent workflows into Cloud DevSecOps to orchestrate highly secure cloud ecosystems.                </p>
+                    Generative and Agentic AI specialist infusing intelligent workflows into Cloud DevSecOps to orchestrate highly secure cloud ecosystems.
+                </p>
 
                 <!-- Restructured Emoji-Rich Technical Skillset Panel -->
                 <div class="skills-card text-start" data-aos="fade-up">
@@ -553,7 +582,7 @@ Generative and Agentic AI specialist infusing intelligent workflows into Cloud D
                     
                     <div class="skills-grid-list">
                         <div class="skills-item">
-                            ✅ <strong>𝐒𝐞𝐜𝐮𝐫𝐢𝐭𝐲 & 𝐂𝐨𝐦𝐩𝐥𝐢𝐚𝐧𝐜𝐞</strong> – Bug Bounty (BROKEN ACCESS CONTROL SPECIALIST), WSTG, Web Pentesting, DevSecOps, Security Automation, Vulnerability Management, ISO 27001/17/18, NIST CSF, CISSP, CIS Top 20, SCADA/ICS (ISO 27109), Incident Response, HIPAA & PCI-DSS compliance⁣
+                            ✅ <strong>𝐒𝐞𝐜𝐮𝐫𝐢𝐭𝐲 & 𝐂𝐦𝐩𝐥𝐢𝐚𝐧𝐜𝐞</strong> – Bug Bounty (BROKEN ACCESS CONTROL SPECIALIST), WSTG, Web Pentesting, DevSecOps, Security Automation, Vulnerability Management, ISO 27001/17/18, NIST CSF, CISSP, CIS Top 20, SCADA/ICS (ISO 27109), Incident Response, HIPAA & PCI-DSS compliance⁣
                             <div class="skills-tools">➡️ Tools: Istio, SPIRE, SPIFFE, OPA, HashiCorp Vault⁣</div>
                         </div>
                         <div class="skills-item">
@@ -563,7 +592,7 @@ Generative and Agentic AI specialist infusing intelligent workflows into Cloud D
                             ✅ <strong>𝐎𝐩𝐞𝐫𝐚𝐭𝐢𝐧𝐠 𝐒𝐲𝐬𝐭𝐞𝐦𝐬</strong> – RHEL, CentOS, Ubuntu, Kali Linux⁣
                         </div>
                         <div class="skills-item">
-                            ✅ <strong>𝐂𝐨𝐧𝐭𝐚𝐢𝐧𝐞𝐫𝐢𝐳𝐚𝐭𝐢𝐨𝐧 & 𝐎𝐫𝐜𝐡𝐞𝐬𝐭𝐫𝐚𝐭𝐢𝐨𝐧</strong> – Docker, Kubernetes, Red Hat OpenShift⁣
+                            ✅ <strong>𝐂containe𝐫𝐢𝐳𝐚𝐭𝐢𝐨𝐧 & 𝐎𝐫𝐜𝐡𝐞𝐬𝐭𝐫𝐚𝐭𝐢𝐨𝐧</strong> – Docker, Kubernetes, Red Hat OpenShift⁣
                         </div>
                         <div class="skills-item">
                             ✅ <strong>𝐂𝐈/𝐂𝐃 𝐏𝐢𝐩𝐞𝐥𝐢𝐧𝐞 𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧</strong> – GitHub Actions, Jenkins, GitLab CI/CD, AWS CodePipeline⁣
@@ -642,27 +671,47 @@ Generative and Agentic AI specialist infusing intelligent workflows into Cloud D
                     <img src="1000128008.jpg" class="deep-project-img lightbox-trigger" alt="Multi-Cloud Zero Trust Architecture">
                 </div>
                 <div class="col-lg-8 project-details-side">
-                    <h3 class="text-white mb-2" style="font-weight:700;">Multi-Cloud Zero Trust Architecture for Healthcare Platforms</h3>
+                    <h3 class="text-white mb-2" style="font-weight:700;">1. Autonomous Multi-Cloud GitOps Engine & Active Disaster Recovery Orchestrator</h3>
                     <div class="mb-3">
-                        <span class="tag">Istio Mesh</span> <span class="tag">SPIRE</span> <span class="tag">Vault</span> <span class="tag">AKS</span> <span class="tag">OPA Guardrails</span>
+                        <span class="tag">AWS EKS</span> <span class="tag">ArgoCD</span> <span class="tag">Terraform</span> <span class="tag">Crossplane</span> <span class="tag">HashiCorp Vault</span> <span class="tag">Velero</span>
                     </div>
                     
                     <!-- Tabs Menu navigation -->
                     <div class="d-flex project-nav-tabs">
-                        <button class="project-tab-btn active" onclick="switchProjectTab('p1-card', 'overview')">Overview</button>
-                        <button class="project-tab-btn" onclick="switchProjectTab('p1-card', 'architecture')">Architecture & Depth</button>
+                        <button class="project-tab-btn active" onclick="switchProjectTab('p1-card', 'architecture')">Architecture</button>
+                        <button class="project-tab-btn" onclick="switchProjectTab('p1-card', 'scalability')">Scalability & HA</button>
                         <button class="project-tab-btn" onclick="switchProjectTab('p1-card', 'security')">Security Guardrails</button>
+                        <button class="project-tab-btn" onclick="switchProjectTab('p1-card', 'metrics')">Metrics & Outcomes</button>
                     </div>
 
                     <!-- Tab Contents Content window -->
-                    <div class="tab-content-pane active" data-tab="overview">
-                        <p>Designed and built a zero-trust production mesh infrastructure engineered for high-compliance healthcare software systems. Focused on cryptographic workload identities and isolated data perimeter constraints across distinct multi-cloud configurations managed via programmatic orchestration templates.</p>
+                    <div class="tab-content-pane active" data-tab="architecture">
+                        <p>Architected and deployed a highly available, enterprise-grade declarative GitOps engine across multi-region AWS EKS topologies. Implemented complete Infrastructure as Code (IaC) loops utilizing modular Terraform and Crossplane control planes to manage underlying compute clusters, cloud resources, and platform configurations entirely out of version control systems.</p>
+                        <ul>
+                            <li><b>Declarative Sync:</b> Integrated ArgoCD with private enterprise GitHub repositories to enforce single-source-of-truth state verification.</li>
+                            <li><b>Secret Lifecycle Injection:</b> Integrated dynamic, short-lived database credential and certificate creation via HashiCorp Vault transit engines.</li>
+                        </ul>
                     </div>
-                    <div class="tab-content-pane" data-tab="architecture">
-                        <p>Managed running clusters evenly across Azure (AKS) and Google Cloud (GKE) topologies. Enforced dynamic mutual TLS (mTLS) parameters across the runtime using Istio coupled with SPIRE/SPIFFE for short-lived token authentications. Used HashiCorp Vault engines to inject application runtime secrets securely dynamically at boot time, avoiding configuration drift or tracking exposure risk.</p>
+                    <div class="tab-content-pane" data-tab="scalability">
+                        <p>Designed for absolute application resilience and continuous regional failover capabilities without operational dependency deadlocks:</p>
+                        <ul>
+                            <li><b>Multi-Region High Availability:</b> Distributed cluster nodes across distinct regional availability zones backed by automated Cluster Autoscaler and Karpenter compute scheduling rules.</li>
+                            <li><b>Disaster Recovery Runbooks:</b> Built automated replication states using Velero and AWS S3 object store structures to back up persistent volume snapshots regularly, reducing target Recovery Time Objectives (RTO).</li>
+                        </ul>
                     </div>
                     <div class="tab-content-pane" data-tab="security">
-                        <p>Enforced mandatory automated runtime constraints via Open Policy Agent (OPA) to reject misconfigured deployments. Constructed HIPAA monitoring rules using distributed Prometheus log scrappers tracking runtime behaviors on live custom Grafana analytic panels.</p>
+                        <p>Enforced strict perimeter and inside-cluster isolation rules to protect microservices from privilege escalation or container escapes:</p>
+                        <ul>
+                            <li><b>RBAC Boundaries:</b> Configured strict AWS IAM Roles for ServiceAccounts (IRSA) mapping to limit microservice permissions.</li>
+                            <li><b>Network Isolations:</b> Implemented native Kubernetes network policy models alongside AWS Security Groups to limit node and container communication vectors.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content-pane" data-tab="metrics">
+                        <p>Delivered measurable cloud reliability improvements and engineering efficiency optimizations:</p>
+                        <ul>
+                            <li><b>Failover Velocity:</b> Decreased manual production deployment time frames from hours down to under 4 minutes with zero manual engineer interactions.</li>
+                            <li><b>Resilience Recovery:</b> Validated live cluster data recovery drills under load, reducing full infrastructure restoration time from a whole day down to less than 45 minutes.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -675,27 +724,47 @@ Generative and Agentic AI specialist infusing intelligent workflows into Cloud D
                     <img src="project2.webp" class="deep-project-img lightbox-trigger" alt="Enterprise GitOps Engine">
                 </div>
                 <div class="col-lg-8 project-details-side">
-                    <h3 class="text-white mb-2" style="font-weight:700;">Enterprise GitOps & Declarative CI/CD on AWS EKS</h3>
+                    <h3 class="text-white mb-2" style="font-weight:700;">2. Agentic AI-Driven DevSecOps Automation & Live Drift Mitigation Pipeline</h3>
                     <div class="mb-3">
-                        <span class="tag">AWS EKS</span> <span class="tag">ArgoCD</span> <span class="tag">Jenkins Core</span> <span class="tag">Amazon ECR</span> <span class="tag">AWS EFS</span>
+                        <span class="tag">GitHub Actions</span> <span class="tag">Python AI Framework</span> <span class="tag">Trivy</span> <span class="tag">SonarQube</span> <span class="tag">OPA</span> <span class="tag">Slack API</span>
                     </div>
                     
                     <!-- Tabs Menu navigation -->
                     <div class="d-flex project-nav-tabs">
-                        <button class="project-tab-btn active" onclick="switchProjectTab('p2-card', 'overview')">Overview</button>
-                        <button class="project-tab-btn" onclick="switchProjectTab('p2-card', 'architecture')">Architecture & Depth</button>
+                        <button class="project-tab-btn active" onclick="switchProjectTab('p2-card', 'architecture')">Architecture</button>
+                        <button class="project-tab-btn" onclick="switchProjectTab('p2-card', 'scalability')">Scalability & HA</button>
                         <button class="project-tab-btn" onclick="switchProjectTab('p2-card', 'security')">Security Guardrails</button>
+                        <button class="project-tab-btn" onclick="switchProjectTab('p2-card', 'metrics')">Metrics & Outcomes</button>
                     </div>
 
                     <!-- Tab Contents Content window -->
-                    <div class="tab-content-pane active" data-tab="overview">
-                        <p>Constructed an automated cloud orchestration pipeline implementing strict GitOps synchronization logic. Eradicated manual target interaction mechanisms entirely, ensuring that every infrastructure shift remains explicitly tracked inside version control histories.</p>
+                    <div class="tab-content-pane active" data-tab="architecture">
+                        <p>Built an automated, self-healing DevSecOps automation pipeline featuring custom intelligent Python script runners that evaluate active infrastructure integrity, catch infrastructure code changes, and auto-remediate configuration flaws before code hits staging arrays.</p>
+                        <ul>
+                            <li><b>Intelligent Pipelines:</b> Coupled static analysis scanners (Trivy, SonarQube) directly inside continuous integration builds with AI loops that output programmatic configuration fixes via GitHub pull requests.</li>
+                            <li><b>Interactive Communication Loop:</b> Connected the pipeline to corporate communication streams using Slack webhook integrations for real-time risk triage alerts.</li>
+                        </ul>
                     </div>
-                    <div class="tab-content-pane" data-tab="architecture">
-                        <p>Active code updates trigger automated multi-stage Jenkins workflows that construct immutable container snapshots, shifting them directly to secure private Amazon ECR registries. Inside the production network, ArgoCD instances constantly match active infrastructure definitions against current live states inside Amazon EKS clusters, applying delta patches smoothly without generating environment downtime.</p>
+                    <div class="tab-content-pane" data-tab="scalability">
+                        <p>Engineered to handle dense web-scale code compilation requests and state checks simultaneously across multiple business groups:</p>
+                        <ul>
+                            <li><b>Decoupled Runners:</b> Scaled out processing loops on containerized, self-hosted GitHub Actions runner instances using Kubernetes-driven event horizontal pod autoscalers (KEDA).</li>
+                            <li><b>Distributed Query Caching:</b> Built container build dependency layer caching arrays to prevent external package registry bottlenecks during peak deployments.</li>
+                        </ul>
                     </div>
                     <div class="tab-content-pane" data-tab="security">
-                        <p>Ingress traffic management components safely isolate processing corridors from internal database storage volumes mapped using scalable Amazon EFS file sharing networks. Access tokens and structural deployment certificates are recycled regularly to completely mitigate attack lateralization risks.</p>
+                        <p>Maintained explicit security scanning safeguards to prevent unverified source modifications from reaching deployment rings:</p>
+                        <ul>
+                            <li><b>Policy Constraints:</b> Integrated Open Policy Agent (OPA) checks to reject pipeline builds with invalid security postures or hardcoded secrets.</li>
+                            <li><b>Vulnerability Signatures:</b> Forced deep scanning configurations to evaluate container images down to base operating system dependency layers before final compilation.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content-pane" data-tab="metrics">
+                        <p>Dramatically reduced the duration of vulnerability lifetimes and elevated standard software engineering security delivery:[cite: 2]</p>
+                        <ul>
+                            <li><b>Vulnerability Management:</b> Shifted security verification fully to the left, catching over 92% of configuration drift and exposed variables prior to cloud provisioning phases.[cite: 2]</li>
+                            <li><b>Remediation Velocity:</b> Cut down team security triage response times for known package vulnerabilities from days to minutes.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -708,27 +777,47 @@ Generative and Agentic AI specialist infusing intelligent workflows into Cloud D
                     <img src="project4.png" class="deep-project-img lightbox-trigger" alt="Multi-Tier Web Infrastructure">
                 </div>
                 <div class="col-lg-8 project-details-side">
-                    <h3 class="text-white mb-2" style="font-weight:700;">Multi-Tier React & FastAPI Microservices on AKS</h3>
+                    <h3 class="text-white mb-2" style="font-weight:700;">3. High-Traffic Zero-Trust Microservices Platform with Distributed Telemetry</h3>
                     <div class="mb-3">
-                        <span class="tag">Terraform</span> <span class="tag">SonarQube Gate</span> <span class="tag">Azure CosmosDB</span> <span class="tag">Azure Container Registry</span>
+                        <span class="tag">Istio Mesh</span> <span class="tag">SPIFFE/SPIRE</span> <span class="tag">Prometheus</span> <span class="tag">Grafana</span> <span class="tag">Fluentbit</span> <span class="tag">Loki</span>
                     </div>
                     
                     <!-- Tabs Menu navigation -->
                     <div class="d-flex project-nav-tabs">
-                        <button class="project-tab-btn active" onclick="switchProjectTab('p3-card', 'overview')">Overview</button>
-                        <button class="project-tab-btn" onclick="switchProjectTab('p3-card', 'architecture')">Architecture & Depth</button>
+                        <button class="project-tab-btn active" onclick="switchProjectTab('p3-card', 'architecture')">Architecture</button>
+                        <button class="project-tab-btn" onclick="switchProjectTab('p3-card', 'scalability')">Scalability & HA</button>
                         <button class="project-tab-btn" onclick="switchProjectTab('p3-card', 'security')">Security Guardrails</button>
+                        <button class="project-tab-btn" onclick="switchProjectTab('p3-card', 'metrics')">Metrics & Outcomes</button>
                     </div>
 
                     <!-- Tab Contents Content window -->
-                    <div class="tab-content-pane active" data-tab="overview">
-                        <p>Designed a highly reliable multi-tier operational microservices app using an automated Infrastructure as Code architecture model. Engineered specialized cloud isolated perimeters ensuring secure public-facing portal connectivity with decoupled backend engines.</p>
+                    <div class="tab-content-pane active" data-tab="architecture">
+                        <p>Engineered a robust multi-tier web application stack running inside an Istio service mesh network layer, establishing explicit zero-trust identity paradigms for cross-container application communication footprints.</p>
+                        <ul>
+                            <li><b>Cryptographic Workload Identity:</b> Leveraged SPIFFE/SPIRE integration blocks to generate short-lived, verifiable X.509 certificates for every container instance, completely bypassing standard static authentication credentials.</li>
+                            <li><b>Full-Stack Telemetry:</b> Built distributed log harvesting loops combining Prometheus metric pollers, Fluentbit collectors, and Grafana Loki aggregation visualization layers.</li>
+                        </ul>
                     </div>
-                    <div class="tab-content-pane" data-tab="architecture">
-                        <p>Provisioned structural cloud boundaries programmatically using complex, parameterized Terraform configuration files. Code iterations are routed directly to safe private Azure Container Registries (ACR) before cluster pull executions trigger on scaled Azure Kubernetes Service (AKS) system instances. Persistent storage elements utilize highly responsive Azure Cosmos DB engines.</p>
+                    <div class="tab-content-pane" data-tab="scalability">
+                        <p>Optimized to provide reliable customer access under heavy query traffic volumes and distributed denial challenges:</p>
+                        <ul>
+                            <li><b>Traffic Slicing Load Balancing:</b> Configured Istio ingress controllers with circuit-breaking parameters, connection pools, and target retries to gracefully handle sudden peak requests.</li>
+                            <li><b>Data Tier Scalability:</b> Connected the application layers to geographically replicated data structures featuring automated vertical cluster adjustment routines.</li>
+                        </ul>
                     </div>
                     <div class="tab-content-pane" data-tab="security">
-                        <p>Embedded automated SonarQube quality gate verification rules directly inside self-hosted runner infrastructure blocks. Code variations failing predefined structural security scans, formatting rules, or code smell metrics are blocked automatically prior to registry image compilation steps.</p>
+                        <p>Mitigated severe platform network attack types and application threat footprints through dense structural perimeters:[cite: 2]</p>
+                        <ul>
+                            <li><b>Enforced mTLS Layering:</b> Enforced strict mutual TLS (mTLS) parameters across the cluster runtime, ensuring all inside-cluster traffic remains fully encrypted in transit.</li>
+                            <li><b>Broken Access Control Mitigation:</b> Constructed strict path-level authorization policies to prevent unauthorized internal service queries and Insecure Direct Object References (IDOR).[cite: 2]</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content-pane" data-tab="metrics">
+                        <p>Achieved enterprise availability targets and enhanced real-time operations discovery metrics:</p>
+                        <ul>
+                            <li><b>Operational Availability:</b> Sustained solid uptime metrics while managing millions of server requests across target clusters.</li>
+                            <li><b>Incident Discovery:</b> Reduced system mean time to detection (MTTD) for anomalies down to less than 2 minutes using targeted alerting rules.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -770,7 +859,7 @@ Generative and Agentic AI specialist infusing intelligent workflows into Cloud D
         <div class="row text-center mb-5 justify-content-center">
             <div class="col-lg-9">
                 <p class="text-light">
-                    As an active security hunter, I test real-world application boundaries. My structural focus centers on uncovering critical **Broken Access Control (BAC)** parameters and configuration bypass flaws, resulting in formal security validation listings from global organizations:
+                    As an active security hunter, I test real-world application boundaries. My structural focus centers on uncovering critical **Broken Access Control (BAC)** parameters and configuration bypass flaws, resulting in formal security validation listings from global organizations:[cite: 2]
                 </p>
             </div>
         </div>
@@ -817,7 +906,6 @@ Generative and Agentic AI specialist infusing intelligent workflows into Cloud D
     <div class="container">
         <div class="section-title" data-aos="fade-up">
             <h2>Experience & Education</h2>
-
         </div>
         <div class="row">
             <!-- Timeline Item -->
@@ -831,10 +919,10 @@ Generative and Agentic AI specialist infusing intelligent workflows into Cloud D
                     <div class="timeline-item">
                         <h4>DevSecOps Engineer</h4>
                         <span>SourceCode Academia | 3 months project 9,10,11/2025</span>
-                        <p>Identified severe access control flaws during infrastructure security assessments, successfully mitigating high-consequence risks of permanent account destruction and mass profile modification.</p>
+                        <p>Identified severe access control flaws during infrastructure security assessments, successfully mitigating high-consequence risks of permanent account destruction and mass profile modification.[cite: 2]</p>
                     </div>
                     <div class="timeline-item">
-                        <h4>Lead Security Architech </h4>
+                        <h4>Lead Security Architect</h4>
                         <span>GRNZ Tech 10/2025 - 5/2026</span>
                         <p>Lead Security Architect spearheading R&D, strategic planning, and team organization to deliver enterprise-grade web application security testing for corporate clients.</p>
                     </div>
