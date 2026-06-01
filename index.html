@@ -80,10 +80,10 @@ body{
         radial-gradient(circle at bottom right,#ec489920,transparent 35%),
         linear-gradient(135deg, rgba(15,23,42,0.9), rgba(17,24,39,0.95)),
         url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1920') no-repeat center center/cover;
-    padding: 120px 0 80px 0;
+    padding: 140px 0 80px 0;
 }
 .hero h1{
-    font-size:56px;
+    font-size:58px;
     font-weight:800;
     line-height:1.2;
 }
@@ -155,10 +155,10 @@ body{
 .hero-profile-img {
     max-width: 100%;
     height: auto;
-    max-height: 520px;
-    border-radius: 32px;
+    max-height: 600px; /* Enhanced size to make it fit big and clear on screen */
+    border-radius: 24px;
     object-fit: cover;
-    filter: drop-shadow(0 0 35px rgba(249,115,22,0.3));
+    filter: drop-shadow(0 0 35px rgba(249,115,22,0.25));
     border: 1px solid rgba(255,255,255,0.1);
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -173,16 +173,46 @@ section{
 }
 .section-title{
     text-align:center;
-    margin-bottom:70px;
+    margin-bottom:60px;
 }
 .section-title h2{
-    font-size:48px;
+    font-size:46px;
     font-weight:800;
     color:white;
 }
 .section-title p{
-    margin-top:15px;
+    margin-top:12px;
     color:#94a3b8;
+}
+
+/* Skills Layout Box */
+.skills-card {
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    padding: 40px;
+    margin-top: 40px;
+    text-align: left;
+}
+.skills-grid-list {
+    margin-top: 25px;
+}
+.skills-item {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+.skills-item:last-child {
+    border-bottom: none;
+}
+.skills-item strong {
+    color: #fff;
+    font-size: 16px;
+}
+.skills-tools {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-top: 4px;
+    padding-left: 28px;
 }
 
 /* Video Containers */
@@ -209,84 +239,74 @@ section{
     height: 100%;
 }
 
-/* Cards & Display Items */
-.glass-card{
-    background:rgba(255,255,255,0.04);
-    border:1px solid rgba(255,255,255,0.08);
-    border-radius:24px;
-    padding:35px;
-    transition:0.4s;
-    backdrop-filter:blur(12px);
-    height:100%;
-    box-shadow:0 8px 25px rgba(0,0,0,0.25);
+/* Deep-Dive Project Cards (ammarwaqar.dev Layout Strategy) */
+.deep-project-card {
+    background: #111827;
+    border-radius: 24px;
+    border: 1px solid rgba(255,255,255,0.06);
+    overflow: hidden;
+    margin-bottom: 40px;
+    transition: 0.3s ease;
 }
-.glass-card:hover{
-    transform:translateY(-10px);
-    border-color:#f97316;
-    box-shadow:0 10px 35px rgba(249,115,22,0.18);
+.deep-project-card:hover {
+    border-color: #f97316;
+    box-shadow: 0 15px 40px rgba(249,115,22,0.1);
 }
-.glass-card i{
-    font-size:40px;
-    margin-bottom:20px;
-    color:#f97316;
+.project-banner-side {
+    position: relative;
+    background: #1e293b;
+    min-height: 280px;
 }
-.glass-card h4{
-    margin-bottom:15px;
-    font-weight:700;
-    color:white;
-}
-.glass-card p{
-    color:#cbd5e1;
-    line-height:1.8;
-    font-size:14px;
-}
-
-/* Original Card Layout Preserved */
-.project-card{
-    background:#111827;
-    border-radius:24px;
-    overflow:hidden;
-    border:1px solid rgba(255,255,255,0.08);
-    transition:0.4s;
-    height:100%;
-    display: flex;
-    flex-direction: column;
-}
-.project-card:hover{
-    transform:translateY(-10px);
-    border-color:#f97316;
-    box-shadow:0 15px 35px rgba(249,115,22,0.18);
-}
-.project-img {
-    height: 250px;
+.deep-project-img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    position: absolute;
+    top:0; left:0;
     cursor: pointer;
     transition: opacity 0.3s;
 }
-.project-img:hover {
-    opacity: 0.9;
+.deep-project-img:hover {
+    opacity: 0.85;
 }
-.project-content{
-    padding:30px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.project-details-side {
+    padding: 40px;
 }
-.project-content h4{
-    font-weight:700;
-    margin-bottom:14px;
-    color:white;
-    font-size: 19px;
-    line-height: 1.4;
-}
-.project-content p{
-    color:#cbd5e1;
-    line-height:1.7;
-    font-size:13.5px;
+.project-nav-tabs {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
     margin-bottom: 20px;
+    gap: 10px;
+}
+.project-tab-btn {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    padding: 8px 16px;
+    font-weight: 600;
+    font-size: 14px;
+    position: relative;
+    transition: 0.2s;
+}
+.project-tab-btn.active {
+    color: #f97316;
+}
+.project-tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #f97316;
+}
+.tab-content-pane {
+    display: none;
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #cbd5e1;
+}
+.tab-content-pane.active {
+    display: block;
 }
 
 .tag{
@@ -439,12 +459,16 @@ footer{
     color: #f97316;
 }
 
+@media(max-width:992px){
+    .project-banner-side { min-height: 220px; }
+}
 @media(max-width:768px){
     .hero h1{ font-size:38px; }
     .section-title h2{ font-size:36px; }
     .hero{ text-align: center; }
     .hero-buttons{ justify-content: center; }
-    .hero-profile-img { max-height: 380px; margin-top: 40px; }
+    .hero-profile-img { max-height: 420px; margin-top: 40px; }
+    .skills-card { padding: 25px; }
 }
 </style>
 </head>
@@ -466,10 +490,9 @@ footer{
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About & Skills</a></li>
                 <li class="nav-item"><a class="nav-link" href="#interview">Presentation</a></li>
-                <li class="nav-item"><a class="nav-link" href="#expertise">Expertise Matrix</a></li>
-                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Engineering Portfolios</a></li>
                 <li class="nav-item"><a class="nav-link" href="#bounty">Security Validation</a></li>
                 <li class="nav-item"><a class="nav-link" href="#experience">Journey</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -504,7 +527,7 @@ footer{
                 </div>
             </div>
             <div class="col-lg-5 text-center" data-aos="fade-left">
-                <img src="2.png" 
+                <img src="Untitled design.png" 
                      class="img-fluid hero-profile-img lightbox-trigger" 
                      alt="Afnan Khan Professional Profile Clear Display">
             </div>
@@ -512,21 +535,70 @@ footer{
     </div>
 </section>
 
-<!-- About Section -->
+<!-- About & Skills Section -->
 <section id="about">
     <div class="container">
         <div class="section-title" data-aos="fade-up">
-            <h2>About Me</h2>
+            <h2>About & Technical Skillset</h2>
             <p>Bridging the Gap Between Agile Operational Workflows and Strong Adversarial Defense</p>
         </div>
         <div class="row justify-content-center">
-            <div class="col-lg-10 text-center">
+            <div class="col-lg-11 text-center">
                 <p class="lead text-light mb-4">
-                    I am a dedicated Cloud DevSecOps Engineer and active Vulnerability Researcher. My core focus lies in deploying resilient infrastructure configurations on AWS, building automated CI/CD security check-gates, and verifying access-control boundary configurations.
+                    I am a Cloud DevSecOps Engineer and active Vulnerability Researcher. I merge automation scripts with container security validation fabrics to implement strict Zero-Trust delivery cycles across multi-cloud software environments.
                 </p>
-                <p class="text-secondary">
-                    Leveraging my technical educational background certified through EduQual UK, I combine automation languages like Python and Bash with container validation fabrics to guarantee secure continuous delivery cycles across distributed software environments.
-                </p>
+
+                <!-- Restructured Emoji-Rich Technical Skillset Panel -->
+                <div class="skills-card text-start" data-aos="fade-up">
+                    <h4 class="text-white mb-4" style="font-weight:700; border-left:4px solid #f97316; padding-left:15px;">Core Areas I Work In:</h4>
+                    
+                    <div class="skills-grid-list">
+                        <div class="skills-item">
+                            ✅ <strong>𝐒𝐞𝐜𝐮𝐫𝐢𝐭𝐲 & 𝐂𝐨𝐦𝐩𝐥𝐢𝐚𝐧𝐜𝐞</strong> – Bug Bounty (BROKEN ACCESS CONTROL SPECIALIST), WSTG, Web Pentesting, DevSecOps, Security Automation, Vulnerability Management, ISO 27001/17/18, NIST CSF, CISSP, CIS Top 20, SCADA/ICS (ISO 27109), Incident Response, HIPAA & PCI-DSS compliance⁣
+                            <div class="skills-tools">➡️ Tools: Istio, SPIRE, SPIFFE, OPA, HashiCorp Vault⁣</div>
+                        </div>
+                        <div class="skills-item">
+                            ✅ <strong>𝐂𝐥𝐨𝐮𝐝 𝐓𝐞𝐜𝐡𝐧𝐨𝐥𝐨𝐠𝐢𝐞𝐬</strong> – Deep dive in AWS (EC2, Lambda, EKS, IAM, CloudTrail, GuardDuty, etc.), plus experience with Azure & GCP⁣
+                        </div>
+                        <div class="skills-item">
+                            ✅ <strong>𝐎𝐩𝐞𝐫𝐚𝐭𝐢𝐧𝐠 𝐒𝐲𝐬𝐭𝐞𝐦𝐬</strong> – RHEL, CentOS, Ubuntu, Kali Linux⁣
+                        </div>
+                        <div class="skills-item">
+                            ✅ <strong>𝐂𝐨𝐧𝐭𝐚𝐢𝐧𝐞𝐫𝐢𝐳𝐚𝐭𝐢𝐨𝐧 & 𝐎𝐫𝐜𝐡𝐞𝐬𝐭𝐫𝐚𝐭𝐢𝐨𝐧</strong> – Docker, Kubernetes, Red Hat OpenShift⁣
+                        </div>
+                        <div class="skills-item">
+                            ✅ <strong>𝐂𝐈/𝐂𝐃 𝐏𝐢𝐩𝐞𝐥𝐢𝐧𝐞 𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧</strong> – GitHub Actions, Jenkins, GitLab CI/CD, AWS CodePipeline⁣
+                        </div>
+                        <div class="skills-item">
+                            ✅ <strong>𝐈𝐧𝐟𝐫𝐚𝐬𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞 𝐚𝐬 𝐂𝐨𝐝𝐞 (𝐈𝐚𝐂)</strong> – Terraform, AWS CloudFormation⁣
+                        </div>
+                        <div class="skills-item">
+                            ✅ <strong>𝐂𝐨𝐧𝐟𝐢𝐠𝐮𝐫𝐚𝐭𝐢𝐨𝐧 𝐌𝐚𝐧𝐚𝐠𝐞𝐦𝐞𝐧𝐭</strong> – Ansible⁣
+                        </div>
+                        <div class="skills-item">
+                            ✅ <strong>𝐕𝐞𝐫𝐬𝐢𝐨𝐧 𝐂𝐨𝐧𝐭𝐫𝐨𝐥</strong> – Git, GitHub⁣
+                        </div>
+                        <div class="skills-item">
+                            ✅ <strong>𝐌𝐨𝐧𝐢𝐭𝐨𝐫𝐢𝐧𝐠 & 𝐋𝐨𝐠𝐠𝐢𝐧𝐠</strong> – Prometheus, ELK Stack, SIEM, Grafana, Fluentbit, Loki⁣
+                        </div>
+                        <div class="skills-item">
+                            ✅ <strong>𝐒𝐜𝐫𝐢𝐩𝐭𝐢𝐧𝐠 & 𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧</strong> – Python, Bash, Selenium⁣
+                        </div>
+                        <div class="skills-item">
+                            ✅ <strong>𝐀𝐈 & 𝐌𝐚𝐜𝐡𝐢𝐧𝐞 𝐋𝐞𝐚𝐫𝐧𝐢𝐧𝐠</strong> – Python for ML, Deep Learning, Model Deployment, NLP, Computer Vision⁣
+                        </div>
+                        <div class="skills-item">
+                            ✅ <strong>𝐕𝐢𝐫𝐭𝐮𝐚𝐥𝐢𝐳𝐚𝐭𝐢𝐨𝐧 & 𝐈𝐧𝐟𝐫𝐚𝐬𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞</strong> – Vagrant⁣
+                        </div>
+                        <div class="skills-item">
+                            ✅ <strong>𝐏𝐫𝐨𝐣𝐞𝐜𝐭 & 𝐖𝐨𝐫𝐤𝐟𝐥𝐨𝐰 𝐌𝐚𝐧𝐚𝐠𝐞𝐦𝐞𝐧𝐭</strong> – JIRA (with Python integration)⁣
+                        </div>
+                        <div class="skills-item">
+                            ✅ <strong>𝐓𝐞𝐚𝐦𝐰𝐨𝐫𝐤 & 𝐂𝐨𝐥𝐥𝐚𝐛𝐨𝐫𝐚𝐭𝐢𝐨𝐧</strong> – Agile, cross-functional collaboration⁣
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -556,167 +628,108 @@ footer{
     </div>
 </section>
 
-<!-- Professional Services & Skills Showcase Matrix Section -->
-<section id="expertise">
-    <div class="container">
-        <div class="section-title" data-aos="fade-up">
-            <h2>Expertise Matrix</h2>
-            <p>Comprehensive technical skillset detailing operational domains and execution competencies</p>
-        </div>
-        <div class="row g-4">
-            <!-- Box 1 -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up">
-                <div class="glass-card">
-                    <i class="fa-solid fa-shield-halved"></i>
-                    <h4>Security & Compliance</h4>
-                    <p><strong>Specialist in Broken Access Control (BAC) bypass validation</strong>, Web Pentesting, WSTG mechanics, vulnerability management, and framework audits: NIST CSF, ISO 27001/17/18, CIS Top 20, HIPAA, PCI-DSS, and SCADA/ICS frameworks (ISO 27019).</p>
-                    <div class="mt-3">
-                        <span class="tag">Istio</span> <span class="tag">SPIRE</span> <span class="tag">SPIFFE</span> <span class="tag">OPA</span> <span class="tag">Vault</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Box 2 -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="glass-card">
-                    <i class="fa-solid fa-cloud"></i>
-                    <h4>Cloud Environments</h4>
-                    <p>Deep-dive architecture implementation across Amazon Web Services ecosystems including fine-grained computing configurations, serverless integrations, and enterprise tracking controls. Supplemental engineering competence in Azure and GCP spaces.</p>
-                    <div class="mt-3">
-                        <span class="tag">EC2</span> <span class="tag">Lambda</span> <span class="tag">EKS</span> <span class="tag">IAM Security</span> <span class="tag">GuardDuty</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Box 3 -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="glass-card">
-                    <i class="fa-solid fa-cubes"></i>
-                    <h4>Container & Cluster Architecture</h4>
-                    <p>Constructing decoupled runtime topologies, local scaling boxes, and continuous cluster environment states utilizing industry-standard container orchestration platforms and enterprise container platforms.</p>
-                    <div class="mt-3">
-                        <span class="tag">Docker</span> <span class="tag">Kubernetes</span> <span class="tag">Red Hat OpenShift</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Box 4 -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up">
-                <div class="glass-card">
-                    <i class="fa-solid fa-infinity"></i>
-                    <h4>CI/CD Pipeline Automation</h4>
-                    <p>Designing custom, zero-friction delivery pipelines that embed automated static analysis, security scans, unit tests, and structural build pushes to target registries upon active commit triggers.</p>
-                    <div class="mt-3">
-                        <span class="tag">GitHub Actions</span> <span class="tag">Jenkins</span> <span class="tag">GitLab CI/CD</span> <span class="tag">AWS CodePipeline</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Box 5 -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="glass-card">
-                    <i class="fa-solid fa-code"></i>
-                    <h4>Infrastructure as Code & Config</h4>
-                    <p>Treating environmental design deterministically by writing declarative configuration templates and configuring automated state controllers to ensure zero drift across servers.</p>
-                    <div class="mt-3">
-                        <span class="tag">Terraform</span> <span class="tag">AWS CloudFormation</span> <span class="tag">Ansible Playbooks</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Box 6 -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="glass-card">
-                    <i class="fa-solid fa-chart-line"></i>
-                    <h4>Monitoring, Logging & SIEM</h4>
-                    <p>Deploying distributed metrics aggregators, event log scraping agents, and full visual dashboard panels to monitor system resource metrics, tracking anomalous operational behaviors.</p>
-                    <div class="mt-3">
-                        <span class="tag">Prometheus</span> <span class="tag">ELK Stack</span> <span class="tag">Grafana</span> <span class="tag">Fluentbit / Loki</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Box 7 -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up">
-                <div class="glass-card">
-                    <i class="fa-solid fa-robot"></i>
-                    <h4>AI, Agentic Workflows & Automation</h4>
-                    <p>Writing automated automation programs using Python, Bash, and Selenium. Building operational infrastructure models for Deep Learning configurations, Natural Language Processing model deliveries, and Computer Vision environments.</p>
-                    <div class="mt-3">
-                        <span class="tag">Python for ML</span> <span class="tag">Model Deployment</span> <span class="tag">JIRA Integration</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Box 8 -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="glass-card">
-                    <i class="fa-solid fa-terminal"></i>
-                    <h4>Operating Systems & Boxes</h4>
-                    <p>Hardening multi-flavor enterprise Linux distributions, managing system access configurations, and provisioning specialized network sandboxes for security verification procedures.</p>
-                    <div class="mt-3">
-                        <span class="tag">RHEL / CentOS</span> <span class="tag">Ubuntu Server</span> <span class="tag">Kali Linux</span> <span class="tag">Vagrant</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Box 9 -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="glass-card">
-                    <i class="fa-solid fa-users"></i>
-                    <h4>Collaboration & Processes</h4>
-                    <p>Managing cross-functional team pipelines utilizing modern project management tooling. Driving continuous sprint delivery cycles under clean Agile system structures.</p>
-                    <div class="mt-3">
-                        <span class="tag">Git & GitHub Flow</span> <span class="tag">JIRA Tracking</span> <span class="tag">Agile Scrum</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Featured Detailed Projects Section (Original Standard Grid Restored) -->
-<section id="projects" style="background: #0b0f19;">
+<!-- Advanced Detailed Projects Section (ammarwaqar.dev Deep Architecture Layout Strategy) -->
+<section id="projects">
     <div class="container">
         <div class="section-title" data-aos="fade-up">
             <h2>Featured Infrastructure Deployments</h2>
-            <p>Deep-dive engineering portfolios showing architectural mechanics and execution proofs</p>
+            <p>Deep-dive production logs mapping architectural metrics, structural obstacles, and operational outcomes</p>
         </div>
-        <div class="row g-4">
-            <!-- Project 1 -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up">
-                <div class="project-card">
-                    <img src="1000128008.jpg" class="project-img lightbox-trigger" alt="Multi-Cloud Zero Trust Architecture">
-                    <div class="project-content">
-                        <div>
-                            <h4>Multi-Cloud Zero Trust Architecture for Healthcare</h4>
-                            <p><strong>Zero Trust:</strong> Deployed an Istio service mesh with SPIRE and HashiCorp Vault for strict mTLS cryptographic workload identification.<br><br><strong>Multi-Cloud & Rules:</strong> Managed production configurations evenly across AKS and GKE clusters using Terraform, enforcing OPA least-privilege boundary validations. Built automated HIPAA compliance verification systems using Fluent Bit, Prometheus, and Grafana dashboard panels.</p>
-                        </div>
-                        <div class="mt-2">
-                            <span class="tag">Istio</span> <span class="tag">SPIRE</span> <span class="tag">Vault</span> <span class="tag">AKS</span> <span class="tag">GKE</span> <span class="tag">OPA</span> <span class="tag">Terraform</span>
-                        </div>
+
+        <!-- Deep Project 1 -->
+        <div class="deep-project-card" data-aos="fade-up" id="p1-card">
+            <div class="row g-0">
+                <div class="col-lg-4 project-banner-side">
+                    <img src="1000128008.jpg" class="deep-project-img lightbox-trigger" alt="Multi-Cloud Zero Trust Architecture">
+                </div>
+                <div class="col-lg-8 project-details-side">
+                    <h3 class="text-white mb-2" style="font-weight:700;">Multi-Cloud Zero Trust Architecture for Healthcare Platforms</h3>
+                    <div class="mb-3">
+                        <span class="tag">Istio Mesh</span> <span class="tag">SPIRE</span> <span class="tag">Vault</span> <span class="tag">AKS</span> <span class="tag">OPA Guardrails</span>
+                    </div>
+                    
+                    <!-- Tabs Menu navigation -->
+                    <div class="d-flex project-nav-tabs">
+                        <button class="project-tab-btn active" onclick="switchProjectTab('p1-card', 'overview')">Overview</button>
+                        <button class="project-tab-btn" onclick="switchProjectTab('p1-card', 'architecture')">Architecture & Depth</button>
+                        <button class="project-tab-btn" onclick="switchProjectTab('p1-card', 'security')">Security Guardrails</button>
+                    </div>
+
+                    <!-- Tab Contents Content window -->
+                    <div class="tab-content-pane active" data-tab="overview">
+                        <p>Designed and built a zero-trust production mesh infrastructure engineered for high-compliance healthcare software systems. Focused on cryptographic workload identities and isolated data perimeter constraints across distinct multi-cloud configurations managed via programmatic orchestration templates.</p>
+                    </div>
+                    <div class="tab-content-pane" data-tab="architecture">
+                        <p>Managed running clusters evenly across Azure (AKS) and Google Cloud (GKE) topologies. Enforced dynamic mutual TLS (mTLS) parameters across the runtime using Istio coupled with SPIRE/SPIFFE for short-lived token authentications. Used HashiCorp Vault engines to inject application runtime secrets securely dynamically at boot time, avoiding configuration drift or tracking exposure risk.</p>
+                    </div>
+                    <div class="tab-content-pane" data-tab="security">
+                        <p>Enforced mandatory automated runtime constraints via Open Policy Agent (OPA) to reject misconfigured deployments. Constructed HIPAA monitoring rules using distributed Prometheus log scrappers tracking runtime behaviors on live custom Grafana analytic panels.</p>
                     </div>
                 </div>
             </div>
-            <!-- Project 2 -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="project-card">
-                    <img src="project2.webp" class="project-img lightbox-trigger" alt="Enterprise GitOps & Hybrid CI/CD">
-                    <div class="project-content">
-                        <div>
-                            <h4>Enterprise GitOps & Hybrid CI/CD on AWS EKS</h4>
-                            <p><strong>Pipeline Control:</strong> Commits automatically trigger Jenkins automation to containerize assets and push versions into Amazon ECR nodes.<br><br><strong>ArgoCD & EFS Engine:</strong> GitOps agents scan configuration shifts and sync state engines inside AWS EKS without downtime. Ingress routing handles external entries safely, directing traffic paths down to stateful storage clusters backed by Amazon EFS storage volumes.</p>
-                        </div>
-                        <div class="mt-2">
-                            <span class="tag">AWS EKS</span> <span class="tag">Jenkins</span> <span class="tag">ArgoCD</span> <span class="tag">ECR</span> <span class="tag">Amazon EFS</span> <span class="tag">Prometheus</span>
-                        </div>
+        </div>
+
+        <!-- Deep Project 2 -->
+        <div class="deep-project-card" data-aos="fade-up" id="p2-card">
+            <div class="row g-0">
+                <div class="col-lg-4 project-banner-side">
+                    <img src="project2.webp" class="deep-project-img lightbox-trigger" alt="Enterprise GitOps Engine">
+                </div>
+                <div class="col-lg-8 project-details-side">
+                    <h3 class="text-white mb-2" style="font-weight:700;">Enterprise GitOps & Declarative CI/CD on AWS EKS</h3>
+                    <div class="mb-3">
+                        <span class="tag">AWS EKS</span> <span class="tag">ArgoCD</span> <span class="tag">Jenkins Core</span> <span class="tag">Amazon ECR</span> <span class="tag">AWS EFS</span>
+                    </div>
+                    
+                    <!-- Tabs Menu navigation -->
+                    <div class="d-flex project-nav-tabs">
+                        <button class="project-tab-btn active" onclick="switchProjectTab('p2-card', 'overview')">Overview</button>
+                        <button class="project-tab-btn" onclick="switchProjectTab('p2-card', 'architecture')">Architecture & Depth</button>
+                        <button class="project-tab-btn" onclick="switchProjectTab('p2-card', 'security')">Security Guardrails</button>
+                    </div>
+
+                    <!-- Tab Contents Content window -->
+                    <div class="tab-content-pane active" data-tab="overview">
+                        <p>Constructed an automated cloud orchestration pipeline implementing strict GitOps synchronization logic. Eradicated manual target interaction mechanisms entirely, ensuring that every infrastructure shift remains explicitly tracked inside version control histories.</p>
+                    </div>
+                    <div class="tab-content-pane" data-tab="architecture">
+                        <p>Active code updates trigger automated multi-stage Jenkins workflows that construct immutable container snapshots, shifting them directly to secure private Amazon ECR registries. Inside the production network, ArgoCD instances constantly match active infrastructure definitions against current live states inside Amazon EKS clusters, applying delta patches smoothly without generating environment downtime.</p>
+                    </div>
+                    <div class="tab-content-pane" data-tab="security">
+                        <p>Ingress traffic management components safely isolate processing corridors from internal database storage volumes mapped using scalable Amazon EFS file sharing networks. Access tokens and structural deployment certificates are recycled regularly to completely mitigate attack lateralization risks.</p>
                     </div>
                 </div>
             </div>
-            <!-- Project 3 -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="project-card">
-                    <img src="project4.png" class="project-img lightbox-trigger" alt="Multi-Tier React & FastAPI">
-                    <div class="project-content">
-                        <div>
-                            <h4>Multi-Tier React & FastAPI Microservices on AKS</h4>
-                            <p><strong>Infrastructure IaC:</strong> Engineered multi-tier runtime parameters programmatically across cloud boundaries using declarative Terraform scripts.<br><br><strong>Secure Deliveries:</strong> Webhook changes pass code testing gates via self-hosted runner networks using SonarQube filters before loading. Backend nodes securely connect to globally distributed Azure Cosmos DB engines monitored through active Grafana channels.</p>
-                        </div>
-                        <div class="mt-2">
-                            <span class="tag">Terraform</span> <span class="tag">AKS</span> <span class="tag">Cosmos DB</span> <span class="tag">SonarQube</span> <span class="tag">ACR</span> <span class="tag">Grafana</span>
-                        </div>
+        </div>
+
+        <!-- Deep Project 3 -->
+        <div class="deep-project-card" data-aos="fade-up" id="p3-card">
+            <div class="row g-0">
+                <div class="col-lg-4 project-banner-side">
+                    <img src="project4.png" class="deep-project-img lightbox-trigger" alt="Multi-Tier Web Infrastructure">
+                </div>
+                <div class="col-lg-8 project-details-side">
+                    <h3 class="text-white mb-2" style="font-weight:700;">Multi-Tier React & FastAPI Microservices on AKS</h3>
+                    <div class="mb-3">
+                        <span class="tag">Terraform</span> <span class="tag">SonarQube Gate</span> <span class="tag">Azure CosmosDB</span> <span class="tag">Azure Container Registry</span>
+                    </div>
+                    
+                    <!-- Tabs Menu navigation -->
+                    <div class="d-flex project-nav-tabs">
+                        <button class="project-tab-btn active" onclick="switchProjectTab('p3-card', 'overview')">Overview</button>
+                        <button class="project-tab-btn" onclick="switchProjectTab('p3-card', 'architecture')">Architecture & Depth</button>
+                        <button class="project-tab-btn" onclick="switchProjectTab('p3-card', 'security')">Security Guardrails</button>
+                    </div>
+
+                    <!-- Tab Contents Content window -->
+                    <div class="tab-content-pane active" data-tab="overview">
+                        <p>Designed a highly reliable multi-tier operational microservices app using an automated Infrastructure as Code architecture model. Engineered specialized cloud isolated perimeters ensuring secure public-facing portal connectivity with decoupled backend engines.</p>
+                    </div>
+                    <div class="tab-content-pane" data-tab="architecture">
+                        <p>Provisioned structural cloud boundaries programmatically using complex, parameterized Terraform configuration files. Code iterations are routed directly to safe private Azure Container Registries (ACR) before cluster pull executions trigger on scaled Azure Kubernetes Service (AKS) system instances. Persistent storage elements utilize highly responsive Azure Cosmos DB engines.</p>
+                    </div>
+                    <div class="tab-content-pane" data-tab="security">
+                        <p>Embedded automated SonarQube quality gate verification rules directly inside self-hosted runner infrastructure blocks. Code variations failing predefined structural security scans, formatting rules, or code smell metrics are blocked automatically prior to registry image compilation steps.</p>
                     </div>
                 </div>
             </div>
@@ -749,7 +762,7 @@ footer{
 </section>
 
 <!-- Bug Bounty Validation & Hall of Fame -->
-<section id="bounty">
+<section id="bounty" style="background: #0b0f19;">
     <div class="container">
         <div class="section-title" data-aos="fade-up">
             <h2>Vulnerability Research Validation</h2>
@@ -801,7 +814,7 @@ footer{
 </section>
 
 <!-- Experience & Education Journey Section -->
-<section id="experience" style="background: #0b0f19;">
+<section id="experience">
     <div class="container">
         <div class="section-title" data-aos="fade-up">
             <h2>Experience & Education</h2>
@@ -851,7 +864,7 @@ footer{
 </section>
 
 <!-- Contact Section -->
-<section id="contact">
+<section id="contact" style="background: #0b0f19;">
     <div class="container">
         <div class="section-title" data-aos="fade-up">
             <h2>Connect With Me</h2>
@@ -898,6 +911,32 @@ footer{
         duration: 1000,
         once: true
     });
+
+    // Interactive Tab Controller for ammarwaqar.dev Layout Setup
+    function switchProjectTab(cardId, tabName) {
+        const card = document.getElementById(cardId);
+        if(!card) return;
+
+        // Toggle Tab Button Active states
+        const buttons = card.querySelectorAll('.project-tab-btn');
+        buttons.forEach(btn => {
+            if(btn.getAttribute('onclick').includes(`'${tabName}'`)) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+
+        // Toggle Active Content Windows
+        const panes = card.querySelectorAll('.tab-content-pane');
+        panes.forEach(pane => {
+            if(pane.getAttribute('data-tab') === tabName) {
+                pane.classList.add('active');
+            } else {
+                pane.classList.remove('active');
+            }
+        });
+    }
 
     // Lightbox Functionality logic
     const lightbox = document.getElementById('lightbox');
