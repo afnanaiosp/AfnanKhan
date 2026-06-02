@@ -656,168 +656,72 @@ footer{
     </div>
 </section>
 
-<!-- Advanced Detailed Projects Section (ammarwaqar.dev Deep Architecture Layout Strategy) -->
-<section id="projects">
+<!-- Featured Detailed Projects Section -->
+<section id="projects" style="background: #0b0f19;">
     <div class="container">
         <div class="section-title" data-aos="fade-up">
             <h2>Featured Infrastructure Deployments</h2>
-            <p>Deep-dive production logs mapping architectural metrics, structural obstacles, and operational outcomes</p>
+            <p>Deep-dive engineering portfolios showing architectural mechanics and execution proofs</p>
         </div>
-
-        <!-- Deep Project 1 -->
-        <div class="deep-project-card" data-aos="fade-up" id="p1-card">
-            <div class="row g-0">
-                <div class="col-lg-4 project-banner-side">
-                    <img src="1000128008.jpg" class="deep-project-img lightbox-trigger" alt="Multi-Cloud Zero Trust Architecture">
-                </div>
-                <div class="col-lg-8 project-details-side">
-                    <h3 class="text-white mb-2" style="font-weight:700;">1. Autonomous Multi-Cloud GitOps Engine & Active Disaster Recovery Orchestrator</h3>
-                    <div class="mb-3">
-                        <span class="tag">AWS EKS</span> <span class="tag">ArgoCD</span> <span class="tag">Terraform</span> <span class="tag">Crossplane</span> <span class="tag">HashiCorp Vault</span> <span class="tag">Velero</span>
-                    </div>
-                    
-                    <!-- Tabs Menu navigation -->
-                    <div class="d-flex project-nav-tabs">
-                        <button class="project-tab-btn active" onclick="switchProjectTab('p1-card', 'architecture')">Architecture</button>
-                        <button class="project-tab-btn" onclick="switchProjectTab('p1-card', 'scalability')">Scalability & HA</button>
-                        <button class="project-tab-btn" onclick="switchProjectTab('p1-card', 'security')">Security Guardrails</button>
-                        <button class="project-tab-btn" onclick="switchProjectTab('p1-card', 'metrics')">Metrics & Outcomes</button>
-                    </div>
-
-                    <!-- Tab Contents Content window -->
-                    <div class="tab-content-pane active" data-tab="architecture">
-                        <p>Architected and deployed a highly available, enterprise-grade declarative GitOps engine across multi-region AWS EKS topologies. Implemented complete Infrastructure as Code (IaC) loops utilizing modular Terraform and Crossplane control planes to manage underlying compute clusters, cloud resources, and platform configurations entirely out of version control systems.</p>
-                        <ul>
-                            <li><b>Declarative Sync:</b> Integrated ArgoCD with private enterprise GitHub repositories to enforce single-source-of-truth state verification.</li>
-                            <li><b>Secret Lifecycle Injection:</b> Integrated dynamic, short-lived database credential and certificate creation via HashiCorp Vault transit engines.</li>
-                        </ul>
-                    </div>
-                    <div class="tab-content-pane" data-tab="scalability">
-                        <p>Designed for absolute application resilience and continuous regional failover capabilities without operational dependency deadlocks:</p>
-                        <ul>
-                            <li><b>Multi-Region High Availability:</b> Distributed cluster nodes across distinct regional availability zones backed by automated Cluster Autoscaler and Karpenter compute scheduling rules.</li>
-                            <li><b>Disaster Recovery Runbooks:</b> Built automated replication states using Velero and AWS S3 object store structures to back up persistent volume snapshots regularly, reducing target Recovery Time Objectives (RTO).</li>
-                        </ul>
-                    </div>
-                    <div class="tab-content-pane" data-tab="security">
-                        <p>Enforced strict perimeter and inside-cluster isolation rules to protect microservices from privilege escalation or container escapes:</p>
-                        <ul>
-                            <li><b>RBAC Boundaries:</b> Configured strict AWS IAM Roles for ServiceAccounts (IRSA) mapping to limit microservice permissions.</li>
-                            <li><b>Network Isolations:</b> Implemented native Kubernetes network policy models alongside AWS Security Groups to limit node and container communication vectors.</li>
-                        </ul>
-                    </div>
-                    <div class="tab-content-pane" data-tab="metrics">
-                        <p>Delivered measurable cloud reliability improvements and engineering efficiency optimizations:</p>
-                        <ul>
-                            <li><b>Failover Velocity:</b> Decreased manual production deployment time frames from hours down to under 4 minutes with zero manual engineer interactions.</li>
-                            <li><b>Resilience Recovery:</b> Validated live cluster data recovery drills under load, reducing full infrastructure restoration time from a whole day down to less than 45 minutes.</li>
-                        </ul>
+        <div class="row g-4">
+            <!-- Project 1 -->
+            <div class="col-12 mb-4" data-aos="fade-up">
+                <div class="project-card flex-md-row">
+                    <img src="1000128008.jpg" class="project-img w-md-50" style="max-width: 450px;" alt="Multi-Cloud Zero Trust Architecture Diagram">
+                    <div class="project-content">
+                        <h4>Multi-Cloud Zero Trust Architecture for Healthcare Systems Using Istio, SPIRE, and HashiCorp Vault on Azure and GCP</h4>
+                        <p>𝐛𝐞𝐫𝐨 𝐓𝐫𝐮𝐬𝐭 𝐒𝐞𝐜𝐮𝐫𝐢𝐭𝐲: Implemented a comprehensive zero-trust model. This included configuring an 𝐈𝐬𝐭𝐢𝐨 𝐬𝐞𝐫𝐯𝐢𝐜𝐞 𝐦𝐞𝐬𝐡 with 𝐒𝐏𝐈𝐑𝐄 for workload authentication and leveraging 𝐇𝐚𝐬𝐡𝐢𝐂𝐨𝐫𝐩 𝐕𝐚𝐮𝐥𝐭 for dynamic secrets management. ⁣
+⁣
+𝐌𝐮𝐥𝐭𝐢-𝐂𝐥𝐨𝐮𝐝 𝐈𝐦𝐩𝐥𝐞𝐦𝐞𝐧𝐭𝐚𝐭𝐢𝐨𝐧: Deployed the architecture across both 𝐀𝐳𝐮𝐫𝐞 𝐊𝐮𝐛𝐞𝐫𝐧𝐞𝐭𝐞𝐬 𝐒𝐞𝐫𝐯𝐢𝐜𝐞 (𝐀𝐊𝐒) and 𝐆𝐨𝐨𝐠𝐥𝐞 𝐊𝐮𝐛𝐞𝐫𝐧𝐞𝐭𝐞𝐬 𝐄𝐧𝐠𝐢𝐧𝐞 (𝐆𝐊𝐄), demonstrating the ability to create a secure multi-cloud environment.⁣
+⁣
+𝐏𝐨𝐥𝐢𝐜𝐲 𝐚𝐧𝐝 𝐀𝐜𝐜𝐞𝐬𝐬 𝐂𝐨𝐧𝐭𝐫𝐨𝐥: Enforced the principle of least privilege through the use of 𝐎𝐩𝐞𝐧 𝐏𝐨𝐥𝐢𝐜𝐲 𝐀𝐠𝐞𝐧𝐭 (𝐎𝐏𝐀) and Rego policies for fine-grained access control. ⁣
+⁣
+𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝐈𝐧𝐟𝐫𝐚𝐬𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞 𝐚𝐬 𝐂𝐨𝐝𝐞 (𝐈𝐚𝐂): Utilized 𝐓𝐞𝐫𝐫𝐚𝐟𝐨𝐫𝐦 and 𝐇𝐞𝐥𝐦 for the provisioning and management of the service mesh across both cloud platforms, ensuring consistency and repeatability.⁣
+⁣
+𝐂𝐨𝐦𝐩𝐥𝐢𝐚𝐧𝐜𝐞 𝐚𝐧𝐝 𝐀𝐮𝐝𝐢𝐭𝐢𝐧𝐠: Demonstrated compliance with 𝐇𝐈𝐏𝐀𝐀 and 𝐈𝐒𝐎/𝐈𝐄𝐂 𝟐𝟕𝟕𝟗𝟗 standards. This was achieved through the implementation of automated evidence collection and audit trails, including the use of 𝐅𝐥𝐮𝐞𝐧𝐭 𝐁𝐢𝐭 and 𝐋𝐨𝐤𝐢 for mTLS handshake audits. ⁣
+⁣
+𝐌𝐨𝐧𝐢𝐭𝐨𝐫𝐢𝐧𝐠 𝐚𝐧𝐝 𝐎𝐛𝐬𝐞𝐫𝐯𝐚𝐛𝐢𝐥𝐢𝐭𝐲: Established a robust monitoring and logging pipeline using 𝐏𝐫𝐨𝐦𝐞𝐭𝐡𝐞𝐮𝐬 for metrics and 𝐆𝐫𝐚𝐟𝐚𝐧𝐚 for visualization, providing deep visibility into the security and performance of the system.⁣</p>
+                        <div class="mt-3">
+                            <span class="tag">Istio</span> <span class="tag">SPIRE</span> <span class="tag">HashiCorp Vault</span> <span class="tag">AKS</span> <span class="tag">GKE</span> <span class="tag">Terraform</span> <span class="tag">OPA</span> <span class="tag">Fluent Bit</span> <span class="tag">Loki</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <!-- Project 2 -->
+            <div class="col-12 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-card flex-md-row">
+                    <img src="project2.webp" class="project-img w-md-50" style="max-width: 450px;" alt="Enterprise GitOps Orchestration Architecture">
+                    <div class="project-content">
+                        <h4>Enterprise GitOps & Hybrid CI/CD Orchestration on AWS EKS with Jenkins, ArgoCD, and Stateful Storage</h4>
+                        <p>The CI/CD Flow: When a developer pushes code from VS Code to the GitHub repository, an automated webhook triggers a dedicated Jenkins Server. Jenkins containerizes the application using Docker, uploads the immutable image to Amazon ECR, and commits the updated manifest metadata back to a GitOps repository.
 
-        <!-- Deep Project 2 -->
-        <div class="deep-project-card" data-aos="fade-up" id="p2-card">
-            <div class="row g-0">
-                <div class="col-lg-4 project-banner-side">
-                    <img src="project2.webp" class="deep-project-img lightbox-trigger" alt="Enterprise GitOps Engine">
-                </div>
-                <div class="col-lg-8 project-details-side">
-                    <h3 class="text-white mb-2" style="font-weight:700;">2. Agentic AI-Driven DevSecOps Automation & Live Drift Mitigation Pipeline</h3>
-                    <div class="mb-3">
-                        <span class="tag">GitHub Actions</span> <span class="tag">Python AI Framework</span> <span class="tag">Trivy</span> <span class="tag">SonarQube</span> <span class="tag">OPA</span> <span class="tag">Slack API</span>
-                    </div>
-                    
-                    <!-- Tabs Menu navigation -->
-                    <div class="d-flex project-nav-tabs">
-                        <button class="project-tab-btn active" onclick="switchProjectTab('p2-card', 'architecture')">Architecture</button>
-                        <button class="project-tab-btn" onclick="switchProjectTab('p2-card', 'scalability')">Scalability & HA</button>
-                        <button class="project-tab-btn" onclick="switchProjectTab('p2-card', 'security')">Security Guardrails</button>
-                        <button class="project-tab-btn" onclick="switchProjectTab('p2-card', 'metrics')">Metrics & Outcomes</button>
-                    </div>
+The GitOps Engine: ArgoCD operates inside the Amazon EKS (Elastic Kubernetes Service) cluster, continuously polling the Git repository. It identifies configuration shifts and pulls down the changes into EKS, executing a zero-downtime rolling update.
 
-                    <!-- Tab Contents Content window -->
-                    <div class="tab-content-pane active" data-tab="architecture">
-                        <p>Built an automated, self-healing DevSecOps automation pipeline featuring custom intelligent Python script runners that evaluate active infrastructure integrity, catch infrastructure code changes, and auto-remediate configuration flaws before code hits staging arrays.</p>
-                        <ul>
-                            <li><b>Intelligent Pipelines:</b> Coupled static analysis scanners (Trivy, SonarQube) directly inside continuous integration builds with AI loops that output programmatic configuration fixes via GitHub pull requests.</li>
-                            <li><b>Interactive Communication Loop:</b> Connected the pipeline to corporate communication streams using Slack webhook integrations for real-time risk triage alerts.</li>
-                        </ul>
-                    </div>
-                    <div class="tab-content-pane" data-tab="scalability">
-                        <p>Engineered to handle dense web-scale code compilation requests and state checks simultaneously across multiple business groups:</p>
-                        <ul>
-                            <li><b>Decoupled Runners:</b> Scaled out processing loops on containerized, self-hosted GitHub Actions runner instances using Kubernetes-driven event horizontal pod autoscalers (KEDA).</li>
-                            <li><b>Distributed Query Caching:</b> Built container build dependency layer caching arrays to prevent external package registry bottlenecks during peak deployments.</li>
-                        </ul>
-                    </div>
-                    <div class="tab-content-pane" data-tab="security">
-                        <p>Maintained explicit security scanning safeguards to prevent unverified source modifications from reaching deployment rings:</p>
-                        <ul>
-                            <li><b>Policy Constraints:</b> Integrated Open Policy Agent (OPA) checks to reject pipeline builds with invalid security postures or hardcoded secrets.</li>
-                            <li><b>Vulnerability Signatures:</b> Forced deep scanning configurations to evaluate container images down to base operating system dependency layers before final compilation.</li>
-                        </ul>
-                    </div>
-                    <div class="tab-content-pane" data-tab="metrics">
-                        <p>Dramatically reduced the duration of vulnerability lifetimes and elevated standard software engineering security delivery:[cite: 2]</p>
-                        <ul>
-                            <li><b>Vulnerability Management:</b> Shifted security verification fully to the left, catching over 92% of configuration drift and exposed variables prior to cloud provisioning phases.[cite: 2]</li>
-                            <li><b>Remediation Velocity:</b> Cut down team security triage response times for known package vulnerabilities from days to minutes.</li>
-                        </ul>
+Workload & Storage Architecture: Public internet traffic routes securely via Route 53 and AWS Certificate Manager (ACM) to an Ingress Application Load Balancer (ALB). The EKS cluster segregates processing layers into a stateless Application Service (managed via Deployments) and a data layer running a StatefulSet. The database pods achieve persistent data safety via Persistent Volume Claims (PVC) mapped to a custom StorageClass backed by Amazon EFS (Elastic File System).
+
+Observability Stack: Comprehensive infrastructure telemetry and log aggregation are managed by a centralized Prometheus and Grafana cluster. It scrapes cluster components through explicit Kubernetes Role Bindings and monitors Jenkins pipeline health, triggering immediate email alerts to system administrators if any anomalies occur.</p>
+                        <div class="mt-3">
+                            <span class="tag">AWS EKS</span> <span class="tag">Jenkins</span> <span class="tag">ArgoCD</span> <span class="tag">Amazon ECR</span> <span class="tag">Amazon EFS</span> <span class="tag">Route 53</span> <span class="tag">Prometheus</span> <span class="tag">Grafana</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <!-- Project 3 -->
+            <div class="col-12 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-card flex-md-row">
+                    <img src="project4.png" class="project-img w-md-50" style="max-width: 450px;" alt="Multi-Tier React & FastAPI Infrastructure Display">
+                    <div class="project-content">
+                        <h4>Multi-Tier React & FastAPI Microservice Architecture on Azure Kubernetes Service (AKS) via Automated Cloud Infrastructure</h4>
+                        <p>Infrastructure Automation: Terraform is used to programmatically spin up and configure the cloud infrastructure, specifically building the underlying virtual network boundaries and provisioning an Azure VM Self-Hosted Agent to run isolated CI/CD tasks safely.
 
-        <!-- Deep Project 3 -->
-        <div class="deep-project-card" data-aos="fade-up" id="p3-card">
-            <div class="row g-0">
-                <div class="col-lg-4 project-banner-side">
-                    <img src="project4.png" class="deep-project-img lightbox-trigger" alt="Multi-Tier Web Infrastructure">
-                </div>
-                <div class="col-lg-8 project-details-side">
-                    <h3 class="text-white mb-2" style="font-weight:700;">3. High-Traffic Zero-Trust Microservices Platform with Distributed Telemetry</h3>
-                    <div class="mb-3">
-                        <span class="tag">Istio Mesh</span> <span class="tag">SPIFFE/SPIRE</span> <span class="tag">Prometheus</span> <span class="tag">Grafana</span> <span class="tag">Fluentbit</span> <span class="tag">Loki</span>
-                    </div>
-                    
-                    <!-- Tabs Menu navigation -->
-                    <div class="d-flex project-nav-tabs">
-                        <button class="project-tab-btn active" onclick="switchProjectTab('p3-card', 'architecture')">Architecture</button>
-                        <button class="project-tab-btn" onclick="switchProjectTab('p3-card', 'scalability')">Scalability & HA</button>
-                        <button class="project-tab-btn" onclick="switchProjectTab('p3-card', 'security')">Security Guardrails</button>
-                        <button class="project-tab-btn" onclick="switchProjectTab('p3-card', 'metrics')">Metrics & Outcomes</button>
-                    </div>
+The Deployment Pipeline: Code pushes to GitHub automatically sync with Azure Repos, triggering the self-hosted runner. The pipeline executes rigorous code analysis and Static Application Security Testing (SAST) via SonarQube to block vulnerabilities and technical debt before compilation. Once passed, the images are built, pushed to Azure Container Registry (ACR), and seamlessly rolled out into Azure Kubernetes Service (AKS).
 
-                    <!-- Tab Contents Content window -->
-                    <div class="tab-content-pane active" data-tab="architecture">
-                        <p>Engineered a robust multi-tier web application stack running inside an Istio service mesh network layer, establishing explicit zero-trust identity paradigms for cross-container application communication footprints.</p>
-                        <ul>
-                            <li><b>Cryptographic Workload Identity:</b> Leveraged SPIFFE/SPIRE integration blocks to generate short-lived, verifiable X.509 certificates for every container instance, completely bypassing standard static authentication credentials.</li>
-                            <li><b>Full-Stack Telemetry:</b> Built distributed log harvesting loops combining Prometheus metric pollers, Fluentbit collectors, and Grafana Loki aggregation visualization layers.</li>
-                        </ul>
-                    </div>
-                    <div class="tab-content-pane" data-tab="scalability">
-                        <p>Optimized to provide reliable customer access under heavy query traffic volumes and distributed denial challenges:</p>
-                        <ul>
-                            <li><b>Traffic Slicing Load Balancing:</b> Configured Istio ingress controllers with circuit-breaking parameters, connection pools, and target retries to gracefully handle sudden peak requests.</li>
-                            <li><b>Data Tier Scalability:</b> Connected the application layers to geographically replicated data structures featuring automated vertical cluster adjustment routines.</li>
-                        </ul>
-                    </div>
-                    <div class="tab-content-pane" data-tab="security">
-                        <p>Mitigated severe platform network attack types and application threat footprints through dense structural perimeters:[cite: 2]</p>
-                        <ul>
-                            <li><b>Enforced mTLS Layering:</b> Enforced strict mutual TLS (mTLS) parameters across the cluster runtime, ensuring all inside-cluster traffic remains fully encrypted in transit.</li>
-                            <li><b>Broken Access Control Mitigation:</b> Constructed strict path-level authorization policies to prevent unauthorized internal service queries and Insecure Direct Object References (IDOR).[cite: 2]</li>
-                        </ul>
-                    </div>
-                    <div class="tab-content-pane" data-tab="metrics">
-                        <p>Achieved enterprise availability targets and enhanced real-time operations discovery metrics:</p>
-                        <ul>
-                            <li><b>Operational Availability:</b> Sustained solid uptime metrics while managing millions of server requests across target clusters.</li>
-                            <li><b>Incident Discovery:</b> Reduced system mean time to detection (MTTD) for anomalies down to less than 2 minutes using targeted alerting rules.</li>
-                        </ul>
+Data & Persistence Layer: The decoupled FastAPI backend interacts with Azure Cosmos DB, utilizing its globally distributed, low-latency multi-model engine to manage fast application data storage and retrieval securely.
+
+Full-Stack Observability: Pods inside the AKS cluster transmit real-time operational and system health metrics directly to Prometheus. These data points feed into custom Grafana dashboards, equipping engineering teams with clear visibility into application response rates, cluster resource utilization, and database connectivity.</p>
+                        <div class="mt-3">
+                            <span class="tag">Terraform</span> <span class="tag">AKS</span> <span class="tag">Azure Cosmos DB</span> <span class="tag">SonarQube</span> <span class="tag">ACR</span> <span class="tag">Prometheus</span> <span class="tag">Grafana</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -848,7 +752,6 @@ footer{
         </div>
     </div>
 </section>
-
 <!-- Bug Bounty Validation & Hall of Fame -->
 <section id="bounty" style="background: #0b0f19;">
     <div class="container">
