@@ -151,7 +151,7 @@ Validated security researcher credited by <strong>Zoho, Dropbox, and Atlassian</
 <span><i class="fa-solid fa-shield-halved"></i>DevSecOps</span>
 </div>
 <div class="hero-buttons">
-<a href="afnanresume2.pdf" target="_blank" class="btn-outline-resume"><i class="fa-solid fa-file-pdf"></i> Resume</a>
+<a href="CV_Afnan_official.pdf" target="_blank" class="btn-outline-resume"><i class="fa-solid fa-file-pdf"></i> Resume</a>
 <a href="https://github.com/AfnanKhan55" target="_blank" class="btn-main"><i class="fab fa-github"></i> GitHub</a>
 <a href="http://www.linkedin.com/in/afnan-khan-a062b322b" target="_blank" class="btn-outline-custom"><i class="fab fa-linkedin"></i> LinkedIn</a>
 <button type="button" class="btn-intro" data-bs-toggle="modal" data-bs-target="#introVideoModal"><i class="fa-solid fa-circle-play"></i> Watch My Introduction</button>
@@ -245,7 +245,7 @@ Validated security researcher credited by <strong>Zoho, Dropbox, and Atlassian</
 <h2>Featured <span class="grad">Projects</span></h2>
 <p>A quick look at my AI and cloud engineering work</p>
 </div>
-<div class="row g-4" id="compact-projects"></div>
+<div class="row g-4 justify-content-center" id="compact-projects"></div>
 <div class="text-center mt-5" data-aos="fade-up">
 <a href="#all-projects" class="btn-main">View All Projects with Details <i class="fa-solid fa-arrow-right ms-1"></i></a>
 </div>
@@ -375,6 +375,11 @@ const projects=[
  short:"Full-stack semantic search and RAG system over your documents, powered by Gemini.",
  desc:"A modern, full-stack semantic search engine and RAG (Retrieval-Augmented Generation) system. Documents are embedded into ChromaDB, retrieved by meaning rather than keywords, and answered by Google Gemini, with a FastAPI backend, SQLite metadata and a Streamlit UI.",
  tags:["FastAPI","Streamlit","ChromaDB","SQLite","Google Gemini API","RAG"]},
+{title:"Self-Healing GitOps & Observability on Kubernetes",
+ img:"https://raw.githubusercontent.com/afnanaiosp/AfnanKhan/main/architecture%20diagram.png",
+ short:"Self-healing Go app on Kind with Argo CD, GitHub Actions and full monitoring.",
+ desc:"A production-style, self-healing Kubernetes pipeline for a Go web app on a local Kind cluster. GitHub Actions handles CI, Argo CD keeps the cluster in sync with Git, and Prometheus, Grafana, Loki and Alertmanager provide metrics, logs, dashboards and alerts end to end.",
+ tags:["Kubernetes","Kind","Argo CD","GitHub Actions","Prometheus","Grafana","Loki","Alertmanager","Go"]},
 {title:"Multi-Cloud Zero Trust for Healthcare",
  img:"1000128008.jpg",
  short:"Zero Trust service mesh across AKS and GKE with Istio, SPIRE and Vault.",
@@ -393,7 +398,7 @@ const projects=[
 ];
 const tagsHtml=t=>t.map(x=>`<span class="tag">${x}</span>`).join("");
 document.getElementById("compact-projects").innerHTML=projects.map((p,i)=>`
-<div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="${i*80}"><a href="#all-projects" class="text-decoration-none"><div class="compact">
+<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="${i*80}"><a href="#all-projects" class="text-decoration-none"><div class="compact">
 ${p.ai?'<span class="badge-ai"><i class="fa-solid fa-wand-magic-sparkles me-1"></i>AI Project</span>':''}
 <h5>${p.title}</h5><p>${p.short}</p>${tagsHtml(p.tags.slice(0,3))}</div></a></div>`).join("");
 document.getElementById("full-projects").innerHTML=projects.map(p=>`
